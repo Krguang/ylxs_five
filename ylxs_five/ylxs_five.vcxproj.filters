@@ -103,6 +103,12 @@
     <Filter Include="VisualGDB settings">
       <UniqueIdentifier>{b953c3df-d40a-402e-ba14-a54724334622}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source files\Bsp">
+      <UniqueIdentifier>{352b8c08-d881-4eda-9a79-7f8223a97550}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\Bsp">
+      <UniqueIdentifier>{fc398f47-50df-44c8-bf94-c05638088c95}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile" />
@@ -285,5 +291,17 @@
     <None Include="stm32.xml">
       <Filter>VisualGDB settings</Filter>
     </None>
+    <ClCompile Include="..\Bsp\bsp_adc.c">
+      <Filter>Source files\Bsp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Bsp\bsp_digitalTube.c">
+      <Filter>Source files\Bsp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\Bsp\bsp_adc.h">
+      <Filter>Header files\Bsp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Bsp\bsp_digitalTube.h">
+      <Filter>Header files\Bsp</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

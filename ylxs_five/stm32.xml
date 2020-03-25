@@ -45,7 +45,7 @@
     <AllDependencies>
       <ProjectDependency>
         <RelativePath>..\ylxs_five.gpdsc</RelativePath>
-        <Timestamp>132295894620613301</Timestamp>
+        <Timestamp>132295906519451613</Timestamp>
       </ProjectDependency>
     </AllDependencies>
     <RootDirectory>
@@ -286,11 +286,11 @@
       <ImportedConfiguration>
         <Settings>
           <IncludeDirectories>
-            <string>C:\Users\krguang\Desktop\Projects\stm32\ylxs_five\Inc</string>
-            <string>C:\Users\krguang\Desktop\Projects\stm32\ylxs_five\Drivers\CMSIS\Device\ST\STM32F1xx\Include</string>
-            <string>C:\Users\krguang\Desktop\Projects\stm32\ylxs_five\Drivers\STM32F1xx_HAL_Driver\Inc</string>
-            <string>C:\Users\krguang\Desktop\Projects\stm32\ylxs_five\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy</string>
-            <string>C:\Users\krguang\Desktop\Projects\stm32\ylxs_five\Drivers\STM32F1xx_HAL_Driver\Src</string>
+            <string>C:\Users\krguang\Desktop\Projects\stm32\ylxs_five\ylxs_five\..\Inc</string>
+            <string>C:\Users\krguang\Desktop\Projects\stm32\ylxs_five\ylxs_five\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include</string>
+            <string>C:\Users\krguang\Desktop\Projects\stm32\ylxs_five\ylxs_five\..\Drivers\STM32F1xx_HAL_Driver\Inc</string>
+            <string>C:\Users\krguang\Desktop\Projects\stm32\ylxs_five\ylxs_five\..\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy</string>
+            <string>C:\Users\krguang\Desktop\Projects\stm32\ylxs_five\ylxs_five\..\Drivers\STM32F1xx_HAL_Driver\Src</string>
           </IncludeDirectories>
           <PreprocessorMacros>
             <string>$$com.sysprogs.bspoptions.primary_memory$$_layout</string>
