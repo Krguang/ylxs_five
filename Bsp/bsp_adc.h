@@ -4,5 +4,5 @@
 
 volatile extern uint16_t ADC_ConvertedValue[];
 extern uint16_t gasData[];
-
+extern uint16_t gasDataOriginal[];
 #endif // __BSP_ADC_H
