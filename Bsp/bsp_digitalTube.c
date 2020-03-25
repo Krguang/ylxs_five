@@ -498,7 +498,7 @@ static void displaySingleDigitalGroup3(uint8_t value)
 	g3_close();
 }
 
-void led1Dispaly(int16_t value)
+static void led1Dispaly(int16_t value)
 {
 	uint8_t ge = 0;
 	uint8_t shi = 0;
@@ -574,7 +574,7 @@ void led1Dispaly(int16_t value)
 }
 
 
-void led2Dispaly(int16_t value)
+static void led2Dispaly(int16_t value)
 {
 	uint8_t ge = 0;
 	uint8_t shi = 0;
@@ -649,7 +649,7 @@ void led2Dispaly(int16_t value)
 	}
 }
 
-void led3Dispaly(int16_t value)
+static void led3Dispaly(int16_t value)
 {
 	uint8_t ge = 0;
 	uint8_t shi = 0;
@@ -724,7 +724,7 @@ void led3Dispaly(int16_t value)
 	}
 }
 
-void led4Dispaly(int16_t value)
+static void led4Dispaly(int16_t value)
 {
 	uint8_t ge = 0;
 	uint8_t shi = 0;
@@ -799,7 +799,7 @@ void led4Dispaly(int16_t value)
 	}
 }
 
-void led5Dispaly(int16_t value)
+static void led5Dispaly(int16_t value)
 {
 	uint8_t ge = 0;
 	uint8_t shi = 0;
