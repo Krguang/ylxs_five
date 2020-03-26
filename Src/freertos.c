@@ -29,6 +29,7 @@
 
 #include "bsp_adc.h"
 #include "bsp_digitalTube.h"
+#include "iwdg.h"
 
 /* USER CODE END Includes */
 
@@ -215,6 +216,7 @@ void StartTaskCollectData(void const * argument)
   {
 	dataProcess();
     osDelay(100);
+	HAL_IWDG_Refresh(&hiwdg);
   }
   /* USER CODE END StartTaskCollectData */
 }
