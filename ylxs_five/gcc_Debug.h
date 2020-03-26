@@ -709,6 +709,9 @@
 #ifndef __FLT32_MANT_DIG__
 #define __FLT32_MANT_DIG__ 24
 #endif
+#ifndef USE_FREERTOS
+#define USE_FREERTOS 1
+#endif
 #ifndef __FLOAT_WORD_ORDER__
 #define __FLOAT_WORD_ORDER__ __ORDER_LITTLE_ENDIAN__
 #endif
@@ -1372,12 +1375,15 @@
 //$(TOOLCHAIN_ROOT)\arm-eabi\sys-include
 //$(TOOLCHAIN_ROOT)\arm-eabi\include
 //../Drivers/CMSIS/Include
+//../Bsp
 //..\Inc
 //..\Drivers\CMSIS\Device\ST\STM32F1xx\Include
 //..\Drivers\STM32F1xx_HAL_Driver\Inc
-//..\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy
 //..\Drivers\STM32F1xx_HAL_Driver\Src
-//../Bsp
+//..\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy
+//../Middlewares/Third_Party/FreeRTOS/Source/include
+//../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3
+//../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS
 // --- Include directories end --- //
 
 

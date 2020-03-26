@@ -20,6 +20,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "cmsis_os.h"
 #include "adc.h"
 #include "dma.h"
 #include "usart.h"
@@ -29,7 +30,6 @@
 /* USER CODE BEGIN Includes */
 
 #include "bsp_adc.h"
-#include "bsp_digitalTube.h"
 
 /* USER CODE END Includes */
 
@@ -55,111 +55,13 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
-
-void dataProcess()
-{
-	uint8_t temp1 = HAL_GPIO_ReadPin(sw_in1_GPIO_Port, sw_in1_Pin);
-	uint8_t temp2 = HAL_GPIO_ReadPin(sw_in2_GPIO_Port, sw_in2_Pin);
-	uint8_t temp = temp1 << 1 + temp2;
-
-
-	/*
-		²¦Âë		Á¿³Ì
-		11		-50/+50
-		10		0/+50
-		01		-100/+100
-		00		0/+100
-	*/
-
-
-	switch (temp)
-	{
-	case 0:
-		for (size_t i = 0; i < 5; i++)
-		{
-			gasData[i] = gasDataOriginal[i] / 10;
-		}
-			break;
-	case 1:
-		for (size_t i = 0; i < 5; i++)
-		{
-			gasData[i] = gasDataOriginal[i] / 5 - 100;
-		}
-		break;
-	case 2:
-		for (size_t i = 0; i < 5; i++)
-		{
-			gasData[i] = gasDataOriginal[i] / 20;
-		}
-		break;
-	case 3:
-		for (size_t i = 0; i < 5; i++)
-		{
-			gasData[i] = gasDataOriginal[i] / 10 -50;
-		}
-		break;
-	default:
-		break;
-	}
-
-	if (gasDataOriginal[0] > 900)
-	{
-		HAL_GPIO_WritePin(red1_GPIO_Port, red1_Pin, GPIO_PIN_RESET);
-		HAL_GPIO_WritePin(green1_GPIO_Port, green1_Pin, GPIO_PIN_SET);
-	}
-	else {
-		HAL_GPIO_WritePin(red1_GPIO_Port, red1_Pin, GPIO_PIN_SET);
-		HAL_GPIO_WritePin(green1_GPIO_Port, green1_Pin, GPIO_PIN_RESET);
-	}
-
-	if (gasDataOriginal[1] > 900)
-	{
-		HAL_GPIO_WritePin(red2_GPIO_Port, red2_Pin, GPIO_PIN_RESET);
-		HAL_GPIO_WritePin(green2_GPIO_Port, green2_Pin, GPIO_PIN_SET);
-	}
-	else {
-		HAL_GPIO_WritePin(red2_GPIO_Port, red2_Pin, GPIO_PIN_SET);
-		HAL_GPIO_WritePin(green2_GPIO_Port, green2_Pin, GPIO_PIN_RESET);
-	}
-
-	if (gasDataOriginal[2] > 900)
-	{
-		HAL_GPIO_WritePin(red3_GPIO_Port, red3_Pin, GPIO_PIN_RESET);
-		HAL_GPIO_WritePin(green3_GPIO_Port, green3_Pin, GPIO_PIN_SET);
-	}
-	else {
-		HAL_GPIO_WritePin(red3_GPIO_Port, red3_Pin, GPIO_PIN_SET);
-		HAL_GPIO_WritePin(green3_GPIO_Port, green3_Pin, GPIO_PIN_RESET);
-	}
-
-	if (gasDataOriginal[3] > 900)
-	{
-		HAL_GPIO_WritePin(red4_GPIO_Port, red4_Pin, GPIO_PIN_RESET);
-		HAL_GPIO_WritePin(green4_GPIO_Port, green4_Pin, GPIO_PIN_SET);
-	}
-	else {
-		HAL_GPIO_WritePin(red4_GPIO_Port, red4_Pin, GPIO_PIN_SET);
-		HAL_GPIO_WritePin(green4_GPIO_Port, green4_Pin, GPIO_PIN_RESET);
-	}
-
-	if (gasDataOriginal[4] > 900)
-	{
-		HAL_GPIO_WritePin(red5_GPIO_Port, red5_Pin, GPIO_PIN_RESET);
-		HAL_GPIO_WritePin(green5_GPIO_Port, green5_Pin, GPIO_PIN_SET);
-	}
-	else {
-		HAL_GPIO_WritePin(red5_GPIO_Port, red5_Pin, GPIO_PIN_SET);
-		HAL_GPIO_WritePin(green5_GPIO_Port, green5_Pin, GPIO_PIN_RESET);
-	}
-
-}
 
 /* USER CODE END 0 */
 
@@ -201,6 +103,12 @@ int main(void)
 
   /* USER CODE END 2 */
 
+  /* Call init function for freertos objects (in freertos.c) */
+  MX_FREERTOS_Init(); 
+  /* Start scheduler */
+  osKernelStart();
+ 
+  /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -208,8 +116,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
-
 
   }
   /* USER CODE END 3 */
@@ -262,6 +168,27 @@ void SystemClock_Config(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
+
+ /**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM4 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM4) {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.

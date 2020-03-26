@@ -1,121 +1,121 @@
 #include "bsp_digitalTube.h"
 
-static inline led1_open() { HAL_GPIO_WritePin(led1_sw_GPIO_Port, led1_sw_Pin, GPIO_PIN_SET); }
-static inline led1_close() { HAL_GPIO_WritePin(led1_sw_GPIO_Port, led1_sw_Pin, GPIO_PIN_RESET); }
+static inline void led1_open() { HAL_GPIO_WritePin(led1_sw_GPIO_Port, led1_sw_Pin, GPIO_PIN_SET); }
+static inline void led1_close() { HAL_GPIO_WritePin(led1_sw_GPIO_Port, led1_sw_Pin, GPIO_PIN_RESET); }
 
-static inline led2_open() { HAL_GPIO_WritePin(led2_sw_GPIO_Port, led2_sw_Pin, GPIO_PIN_SET); }
-static inline led2_close() { HAL_GPIO_WritePin(led2_sw_GPIO_Port, led2_sw_Pin, GPIO_PIN_RESET); }
+static inline void led2_open() { HAL_GPIO_WritePin(led2_sw_GPIO_Port, led2_sw_Pin, GPIO_PIN_SET); }
+static inline void led2_close() { HAL_GPIO_WritePin(led2_sw_GPIO_Port, led2_sw_Pin, GPIO_PIN_RESET); }
 
-static inline led3_open() { HAL_GPIO_WritePin(led3_sw_GPIO_Port, led3_sw_Pin, GPIO_PIN_SET); }
-static inline led3_close() { HAL_GPIO_WritePin(led3_sw_GPIO_Port, led3_sw_Pin, GPIO_PIN_RESET); }
+static inline void led3_open() { HAL_GPIO_WritePin(led3_sw_GPIO_Port, led3_sw_Pin, GPIO_PIN_SET); }
+static inline void led3_close() { HAL_GPIO_WritePin(led3_sw_GPIO_Port, led3_sw_Pin, GPIO_PIN_RESET); }
 
-static inline led4_open() { HAL_GPIO_WritePin(led4_sw_GPIO_Port, led4_sw_Pin, GPIO_PIN_SET); }
-static inline led4_close() { HAL_GPIO_WritePin(led4_sw_GPIO_Port, led4_sw_Pin, GPIO_PIN_RESET); }
+static inline void led4_open() { HAL_GPIO_WritePin(led4_sw_GPIO_Port, led4_sw_Pin, GPIO_PIN_SET); }
+static inline void led4_close() { HAL_GPIO_WritePin(led4_sw_GPIO_Port, led4_sw_Pin, GPIO_PIN_RESET); }
 
-static inline led5_open() { HAL_GPIO_WritePin(led5_sw_GPIO_Port, led5_sw_Pin, GPIO_PIN_SET); }
-static inline led5_close() { HAL_GPIO_WritePin(led5_sw_GPIO_Port, led5_sw_Pin, GPIO_PIN_RESET); }
+static inline void led5_open() { HAL_GPIO_WritePin(led5_sw_GPIO_Port, led5_sw_Pin, GPIO_PIN_SET); }
+static inline void led5_close() { HAL_GPIO_WritePin(led5_sw_GPIO_Port, led5_sw_Pin, GPIO_PIN_RESET); }
 
-static inline led6_open() { HAL_GPIO_WritePin(led6_sw_GPIO_Port, led6_sw_Pin, GPIO_PIN_SET); }
-static inline led6_close() { HAL_GPIO_WritePin(led6_sw_GPIO_Port, led6_sw_Pin, GPIO_PIN_RESET); }
+static inline void led6_open() { HAL_GPIO_WritePin(led6_sw_GPIO_Port, led6_sw_Pin, GPIO_PIN_SET); }
+static inline void led6_close() { HAL_GPIO_WritePin(led6_sw_GPIO_Port, led6_sw_Pin, GPIO_PIN_RESET); }
 
-static inline led7_open() { HAL_GPIO_WritePin(led7_sw_GPIO_Port, led7_sw_Pin, GPIO_PIN_SET); }
-static inline led7_close() { HAL_GPIO_WritePin(led7_sw_GPIO_Port, led7_sw_Pin, GPIO_PIN_RESET); }
+static inline void led7_open() { HAL_GPIO_WritePin(led7_sw_GPIO_Port, led7_sw_Pin, GPIO_PIN_SET); }
+static inline void led7_close() { HAL_GPIO_WritePin(led7_sw_GPIO_Port, led7_sw_Pin, GPIO_PIN_RESET); }
 
-static inline led8_open() { HAL_GPIO_WritePin(led8_sw_GPIO_Port, led8_sw_Pin, GPIO_PIN_SET); }
-static inline led8_close() { HAL_GPIO_WritePin(led8_sw_GPIO_Port, led8_sw_Pin, GPIO_PIN_RESET); }
+static inline void led8_open() { HAL_GPIO_WritePin(led8_sw_GPIO_Port, led8_sw_Pin, GPIO_PIN_SET); }
+static inline void led8_close() { HAL_GPIO_WritePin(led8_sw_GPIO_Port, led8_sw_Pin, GPIO_PIN_RESET); }
 
-static inline led9_open() { HAL_GPIO_WritePin(led9_sw_GPIO_Port, led9_sw_Pin, GPIO_PIN_SET); }
-static inline led9_close() { HAL_GPIO_WritePin(led9_sw_GPIO_Port, led9_sw_Pin, GPIO_PIN_RESET); }
+static inline void led9_open() { HAL_GPIO_WritePin(led9_sw_GPIO_Port, led9_sw_Pin, GPIO_PIN_SET); }
+static inline void led9_close() { HAL_GPIO_WritePin(led9_sw_GPIO_Port, led9_sw_Pin, GPIO_PIN_RESET); }
 
-static inline led10_open() { HAL_GPIO_WritePin(led10_sw_GPIO_Port, led10_sw_Pin, GPIO_PIN_SET); }
-static inline led10_close() { HAL_GPIO_WritePin(led10_sw_GPIO_Port, led10_sw_Pin, GPIO_PIN_RESET); }
+static inline void led10_open() { HAL_GPIO_WritePin(led10_sw_GPIO_Port, led10_sw_Pin, GPIO_PIN_SET); }
+static inline void led10_close() { HAL_GPIO_WritePin(led10_sw_GPIO_Port, led10_sw_Pin, GPIO_PIN_RESET); }
 
-static inline led11_open() { HAL_GPIO_WritePin(led11_sw_GPIO_Port, led11_sw_Pin, GPIO_PIN_SET); }
-static inline led11_close() { HAL_GPIO_WritePin(led11_sw_GPIO_Port, led11_sw_Pin, GPIO_PIN_RESET); }
+static inline void led11_open() { HAL_GPIO_WritePin(led11_sw_GPIO_Port, led11_sw_Pin, GPIO_PIN_SET); }
+static inline void led11_close() { HAL_GPIO_WritePin(led11_sw_GPIO_Port, led11_sw_Pin, GPIO_PIN_RESET); }
 
-static inline led12_open() { HAL_GPIO_WritePin(led12_sw_GPIO_Port, led12_sw_Pin, GPIO_PIN_SET); }
-static inline led12_close() { HAL_GPIO_WritePin(led12_sw_GPIO_Port, led12_sw_Pin, GPIO_PIN_RESET); }
+static inline void led12_open() { HAL_GPIO_WritePin(led12_sw_GPIO_Port, led12_sw_Pin, GPIO_PIN_SET); }
+static inline void led12_close() { HAL_GPIO_WritePin(led12_sw_GPIO_Port, led12_sw_Pin, GPIO_PIN_RESET); }
 
-static inline led13_open() { HAL_GPIO_WritePin(led13_sw_GPIO_Port, led13_sw_Pin, GPIO_PIN_SET); }
-static inline led13_close() { HAL_GPIO_WritePin(led13_sw_GPIO_Port, led13_sw_Pin, GPIO_PIN_RESET); }
+static inline void led13_open() { HAL_GPIO_WritePin(led13_sw_GPIO_Port, led13_sw_Pin, GPIO_PIN_SET); }
+static inline void led13_close() { HAL_GPIO_WritePin(led13_sw_GPIO_Port, led13_sw_Pin, GPIO_PIN_RESET); }
 
-static inline led14_open() { HAL_GPIO_WritePin(led14_sw_GPIO_Port, led14_sw_Pin, GPIO_PIN_SET); }
-static inline led14_close() { HAL_GPIO_WritePin(led14_sw_GPIO_Port, led14_sw_Pin, GPIO_PIN_RESET); }
+static inline void led14_open() { HAL_GPIO_WritePin(led14_sw_GPIO_Port, led14_sw_Pin, GPIO_PIN_SET); }
+static inline void led14_close() { HAL_GPIO_WritePin(led14_sw_GPIO_Port, led14_sw_Pin, GPIO_PIN_RESET); }
 
-static inline led15_open() { HAL_GPIO_WritePin(led15_sw_GPIO_Port, led15_sw_Pin, GPIO_PIN_SET); }
-static inline led15_close() { HAL_GPIO_WritePin(led15_sw_GPIO_Port, led15_sw_Pin, GPIO_PIN_RESET); }
+static inline void led15_open() { HAL_GPIO_WritePin(led15_sw_GPIO_Port, led15_sw_Pin, GPIO_PIN_SET); }
+static inline void led15_close() { HAL_GPIO_WritePin(led15_sw_GPIO_Port, led15_sw_Pin, GPIO_PIN_RESET); }
 
-static inline a1_open() { HAL_GPIO_WritePin(a1_GPIO_Port, a1_Pin, GPIO_PIN_SET); }
-static inline a1_close() { HAL_GPIO_WritePin(a1_GPIO_Port, a1_Pin, GPIO_PIN_RESET); }
+static inline void a1_open() { HAL_GPIO_WritePin(a1_GPIO_Port, a1_Pin, GPIO_PIN_SET); }
+static inline void a1_close() { HAL_GPIO_WritePin(a1_GPIO_Port, a1_Pin, GPIO_PIN_RESET); }
 
-static inline a2_open() { HAL_GPIO_WritePin(a2_GPIO_Port, a2_Pin, GPIO_PIN_SET); }
-static inline a2_close() { HAL_GPIO_WritePin(a2_GPIO_Port, a2_Pin, GPIO_PIN_RESET); }
+static inline void a2_open() { HAL_GPIO_WritePin(a2_GPIO_Port, a2_Pin, GPIO_PIN_SET); }
+static inline void a2_close() { HAL_GPIO_WritePin(a2_GPIO_Port, a2_Pin, GPIO_PIN_RESET); }
 
-static inline a3_open() { HAL_GPIO_WritePin(a3_GPIO_Port, a3_Pin, GPIO_PIN_SET); }
-static inline a3_close() { HAL_GPIO_WritePin(a3_GPIO_Port, a3_Pin, GPIO_PIN_RESET); }
+static inline void a3_open() { HAL_GPIO_WritePin(a3_GPIO_Port, a3_Pin, GPIO_PIN_SET); }
+static inline void a3_close() { HAL_GPIO_WritePin(a3_GPIO_Port, a3_Pin, GPIO_PIN_RESET); }
 
-static inline b1_open() { HAL_GPIO_WritePin(b1_GPIO_Port, b1_Pin, GPIO_PIN_SET); }
-static inline b1_close() { HAL_GPIO_WritePin(b1_GPIO_Port, b1_Pin, GPIO_PIN_RESET); }
+static inline void b1_open() { HAL_GPIO_WritePin(b1_GPIO_Port, b1_Pin, GPIO_PIN_SET); }
+static inline void b1_close() { HAL_GPIO_WritePin(b1_GPIO_Port, b1_Pin, GPIO_PIN_RESET); }
 
-static inline b2_open() { HAL_GPIO_WritePin(b2_GPIO_Port, b2_Pin, GPIO_PIN_SET); }
-static inline b2_close() { HAL_GPIO_WritePin(b2_GPIO_Port, b2_Pin, GPIO_PIN_RESET); }
+static inline void b2_open() { HAL_GPIO_WritePin(b2_GPIO_Port, b2_Pin, GPIO_PIN_SET); }
+static inline void b2_close() { HAL_GPIO_WritePin(b2_GPIO_Port, b2_Pin, GPIO_PIN_RESET); }
 
-static inline b3_open() { HAL_GPIO_WritePin(b3_GPIO_Port, b3_Pin, GPIO_PIN_SET); }
-static inline b3_close() { HAL_GPIO_WritePin(b3_GPIO_Port, b3_Pin, GPIO_PIN_RESET); }
+static inline void b3_open() { HAL_GPIO_WritePin(b3_GPIO_Port, b3_Pin, GPIO_PIN_SET); }
+static inline void b3_close() { HAL_GPIO_WritePin(b3_GPIO_Port, b3_Pin, GPIO_PIN_RESET); }
 
-static inline c1_open() { HAL_GPIO_WritePin(c1_GPIO_Port, c1_Pin, GPIO_PIN_SET); }
-static inline c1_close() { HAL_GPIO_WritePin(c1_GPIO_Port, c1_Pin, GPIO_PIN_RESET); }
+static inline void c1_open() { HAL_GPIO_WritePin(c1_GPIO_Port, c1_Pin, GPIO_PIN_SET); }
+static inline void c1_close() { HAL_GPIO_WritePin(c1_GPIO_Port, c1_Pin, GPIO_PIN_RESET); }
 
-static inline c2_open() { HAL_GPIO_WritePin(c2_GPIO_Port, c2_Pin, GPIO_PIN_SET); }
-static inline c2_close() { HAL_GPIO_WritePin(c2_GPIO_Port, c2_Pin, GPIO_PIN_RESET); }
+static inline void c2_open() { HAL_GPIO_WritePin(c2_GPIO_Port, c2_Pin, GPIO_PIN_SET); }
+static inline void c2_close() { HAL_GPIO_WritePin(c2_GPIO_Port, c2_Pin, GPIO_PIN_RESET); }
 
-static inline c3_open() { HAL_GPIO_WritePin(c3_GPIO_Port, c3_Pin, GPIO_PIN_SET); }
-static inline c3_close() { HAL_GPIO_WritePin(c3_GPIO_Port, c3_Pin, GPIO_PIN_RESET); }
+static inline void c3_open() { HAL_GPIO_WritePin(c3_GPIO_Port, c3_Pin, GPIO_PIN_SET); }
+static inline void c3_close() { HAL_GPIO_WritePin(c3_GPIO_Port, c3_Pin, GPIO_PIN_RESET); }
 
-static inline d1_open() { HAL_GPIO_WritePin(d1_GPIO_Port, d1_Pin, GPIO_PIN_SET); }
-static inline d1_close() { HAL_GPIO_WritePin(d1_GPIO_Port, d1_Pin, GPIO_PIN_RESET); }
+static inline void d1_open() { HAL_GPIO_WritePin(d1_GPIO_Port, d1_Pin, GPIO_PIN_SET); }
+static inline void d1_close() { HAL_GPIO_WritePin(d1_GPIO_Port, d1_Pin, GPIO_PIN_RESET); }
 
-static inline d2_open() { HAL_GPIO_WritePin(d2_GPIO_Port, d2_Pin, GPIO_PIN_SET); }
-static inline d2_close() { HAL_GPIO_WritePin(d2_GPIO_Port, d2_Pin, GPIO_PIN_RESET); }
+static inline void d2_open() { HAL_GPIO_WritePin(d2_GPIO_Port, d2_Pin, GPIO_PIN_SET); }
+static inline void d2_close() { HAL_GPIO_WritePin(d2_GPIO_Port, d2_Pin, GPIO_PIN_RESET); }
 
-static inline d3_open() { HAL_GPIO_WritePin(d3_GPIO_Port, d3_Pin, GPIO_PIN_SET); }
-static inline d3_close() { HAL_GPIO_WritePin(d3_GPIO_Port, d3_Pin, GPIO_PIN_RESET); }
+static inline void d3_open() { HAL_GPIO_WritePin(d3_GPIO_Port, d3_Pin, GPIO_PIN_SET); }
+static inline void d3_close() { HAL_GPIO_WritePin(d3_GPIO_Port, d3_Pin, GPIO_PIN_RESET); }
 
-static inline e1_open() { HAL_GPIO_WritePin(e1_GPIO_Port, e1_Pin, GPIO_PIN_SET); }
-static inline e1_close() { HAL_GPIO_WritePin(e1_GPIO_Port, e1_Pin, GPIO_PIN_RESET); }
+static inline void e1_open() { HAL_GPIO_WritePin(e1_GPIO_Port, e1_Pin, GPIO_PIN_SET); }
+static inline void e1_close() { HAL_GPIO_WritePin(e1_GPIO_Port, e1_Pin, GPIO_PIN_RESET); }
 
-static inline e2_open() { HAL_GPIO_WritePin(e2_GPIO_Port, e2_Pin, GPIO_PIN_SET); }
-static inline e2_close() { HAL_GPIO_WritePin(e2_GPIO_Port, e2_Pin, GPIO_PIN_RESET); }
+static inline void e2_open() { HAL_GPIO_WritePin(e2_GPIO_Port, e2_Pin, GPIO_PIN_SET); }
+static inline void e2_close() { HAL_GPIO_WritePin(e2_GPIO_Port, e2_Pin, GPIO_PIN_RESET); }
 
-static inline e3_open() { HAL_GPIO_WritePin(e3_GPIO_Port, e3_Pin, GPIO_PIN_SET); }
-static inline e3_close() { HAL_GPIO_WritePin(e3_GPIO_Port, e3_Pin, GPIO_PIN_RESET); }
+static inline void e3_open() { HAL_GPIO_WritePin(e3_GPIO_Port, e3_Pin, GPIO_PIN_SET); }
+static inline void e3_close() { HAL_GPIO_WritePin(e3_GPIO_Port, e3_Pin, GPIO_PIN_RESET); }
 
-static inline f1_open() { HAL_GPIO_WritePin(f1_GPIO_Port, f1_Pin, GPIO_PIN_SET); }
-static inline f1_close() { HAL_GPIO_WritePin(f1_GPIO_Port, f1_Pin, GPIO_PIN_RESET); }
+static inline void f1_open() { HAL_GPIO_WritePin(f1_GPIO_Port, f1_Pin, GPIO_PIN_SET); }
+static inline void f1_close() { HAL_GPIO_WritePin(f1_GPIO_Port, f1_Pin, GPIO_PIN_RESET); }
 
-static inline f2_open() { HAL_GPIO_WritePin(f2_GPIO_Port, f2_Pin, GPIO_PIN_SET); }
-static inline f2_close() { HAL_GPIO_WritePin(f2_GPIO_Port, f2_Pin, GPIO_PIN_RESET); }
+static inline void f2_open() { HAL_GPIO_WritePin(f2_GPIO_Port, f2_Pin, GPIO_PIN_SET); }
+static inline void f2_close() { HAL_GPIO_WritePin(f2_GPIO_Port, f2_Pin, GPIO_PIN_RESET); }
 
-static inline f3_open() { HAL_GPIO_WritePin(f3_GPIO_Port, f3_Pin, GPIO_PIN_SET); }
-static inline f3_close() { HAL_GPIO_WritePin(f3_GPIO_Port, f3_Pin, GPIO_PIN_RESET); }
+static inline void f3_open() { HAL_GPIO_WritePin(f3_GPIO_Port, f3_Pin, GPIO_PIN_SET); }
+static inline void f3_close() { HAL_GPIO_WritePin(f3_GPIO_Port, f3_Pin, GPIO_PIN_RESET); }
 
-static inline g1_open() { HAL_GPIO_WritePin(g1_GPIO_Port, g1_Pin, GPIO_PIN_SET); }
-static inline g1_close() { HAL_GPIO_WritePin(g1_GPIO_Port, g1_Pin, GPIO_PIN_RESET); }
+static inline void g1_open() { HAL_GPIO_WritePin(g1_GPIO_Port, g1_Pin, GPIO_PIN_SET); }
+static inline void g1_close() { HAL_GPIO_WritePin(g1_GPIO_Port, g1_Pin, GPIO_PIN_RESET); }
 
-static inline g2_open() { HAL_GPIO_WritePin(g2_GPIO_Port, g2_Pin, GPIO_PIN_SET); }
-static inline g2_close() { HAL_GPIO_WritePin(g2_GPIO_Port, g2_Pin, GPIO_PIN_RESET); }
+static inline void g2_open() { HAL_GPIO_WritePin(g2_GPIO_Port, g2_Pin, GPIO_PIN_SET); }
+static inline void g2_close() { HAL_GPIO_WritePin(g2_GPIO_Port, g2_Pin, GPIO_PIN_RESET); }
 
-static inline g3_open() { HAL_GPIO_WritePin(g3_GPIO_Port, g3_Pin, GPIO_PIN_SET); }
-static inline g3_close() { HAL_GPIO_WritePin(g3_GPIO_Port, g3_Pin, GPIO_PIN_RESET); }
+static inline void g3_open() { HAL_GPIO_WritePin(g3_GPIO_Port, g3_Pin, GPIO_PIN_SET); }
+static inline void g3_close() { HAL_GPIO_WritePin(g3_GPIO_Port, g3_Pin, GPIO_PIN_RESET); }
 
-static inline dp1_open() { HAL_GPIO_WritePin(dp1_GPIO_Port, dp1_Pin, GPIO_PIN_SET); }
-static inline dp1_close() { HAL_GPIO_WritePin(dp1_GPIO_Port, dp1_Pin, GPIO_PIN_RESET); }
+static inline void dp1_open() { HAL_GPIO_WritePin(dp1_GPIO_Port, dp1_Pin, GPIO_PIN_SET); }
+static inline void dp1_close() { HAL_GPIO_WritePin(dp1_GPIO_Port, dp1_Pin, GPIO_PIN_RESET); }
 
-static inline dp2_open() { HAL_GPIO_WritePin(dp2_GPIO_Port, dp2_Pin, GPIO_PIN_SET); }
-static inline dp2_close() { HAL_GPIO_WritePin(dp2_GPIO_Port, dp2_Pin, GPIO_PIN_RESET); }
+static inline void dp2_open() { HAL_GPIO_WritePin(dp2_GPIO_Port, dp2_Pin, GPIO_PIN_SET); }
+static inline void dp2_close() { HAL_GPIO_WritePin(dp2_GPIO_Port, dp2_Pin, GPIO_PIN_RESET); }
 
-static inline dp3_open() { HAL_GPIO_WritePin(dp3_GPIO_Port, dp3_Pin, GPIO_PIN_SET); }
-static inline dp3_close() { HAL_GPIO_WritePin(dp3_GPIO_Port, dp3_Pin, GPIO_PIN_RESET); }
+static inline void dp3_open() { HAL_GPIO_WritePin(dp3_GPIO_Port, dp3_Pin, GPIO_PIN_SET); }
+static inline void dp3_close() { HAL_GPIO_WritePin(dp3_GPIO_Port, dp3_Pin, GPIO_PIN_RESET); }
 
 
 static void led1Dispaly(int16_t value);
@@ -123,6 +123,8 @@ static void led2Dispaly(int16_t value);
 static void led3Dispaly(int16_t value);
 static void led4Dispaly(int16_t value);
 static void led5Dispaly(int16_t value);
+
+
 
 void digitalTubeDisplay(uint8_t num, int16_t value)
 {
@@ -254,6 +256,13 @@ static void displaySingleDigitalGroup1(uint8_t value)
 		g1_open();
 		break;
 	default:
+		a1_close();
+		b1_close();
+		c1_close();
+		d1_close();
+		e1_close();
+		f1_close();
+		g1_close();
 		break;
 	}
 	HAL_Delay(1);
@@ -370,6 +379,13 @@ static void displaySingleDigitalGroup2(uint8_t value)
 		g2_open();
 		break;
 	default:
+		a2_close();
+		b2_close();
+		c2_close();
+		d2_close();
+		e2_close();
+		f2_close();
+		g2_close();
 		break;
 	}
 	HAL_Delay(1);
@@ -486,6 +502,13 @@ static void displaySingleDigitalGroup3(uint8_t value)
 		g3_open();
 		break;
 	default:
+		a3_close();
+		b3_close();
+		c3_close();
+		d3_close();
+		e3_close();
+		f3_close();
+		g3_close();
 		break;
 	}
 	HAL_Delay(1);
@@ -742,27 +765,29 @@ static void led4Dispaly(int16_t value)
 		shi = value % 100 / 10;
 		ge = value % 10;
 
-		led7_close();
-		led8_close();
-		led9_close();
 		led10_open();
 		led11_close();
 		led12_close();
-		displaySingleDigitalGroup2(10);
-		led7_close();
-		led8_close();
-		led9_close();
+		led13_close();
+		led14_close();
+		led15_close();
+		displaySingleDigitalGroup3(10);
+
 		led10_close();
 		led11_open();
 		led12_close();
-		displaySingleDigitalGroup2(shi);
-		led7_close();
-		led8_close();
-		led9_close();
+		led13_close();
+		led14_close();
+		led15_close();
+		displaySingleDigitalGroup3(shi);
+
 		led10_close();
 		led11_close();
 		led12_open();
-		displaySingleDigitalGroup2(ge);
+		led13_close();
+		led14_close();
+		led15_close();
+		displaySingleDigitalGroup3(ge);
 	}
 	else
 	{
@@ -775,27 +800,30 @@ static void led4Dispaly(int16_t value)
 		shi = value % 100 / 10;
 		ge = value % 10;
 
-		led7_close();
-		led8_close();
-		led9_close();
+
 		led10_open();
 		led11_close();
 		led12_close();
-		displaySingleDigitalGroup2(bai);
-		led7_close();
-		led8_close();
-		led9_close();
+		led13_close();
+		led14_close();
+		led15_close();
+		displaySingleDigitalGroup3(bai);
+
 		led10_close();
 		led11_open();
 		led12_close();
-		displaySingleDigitalGroup2(shi);
-		led7_close();
-		led8_close();
-		led9_close();
+		led13_close();
+		led14_close();
+		led15_close();
+		displaySingleDigitalGroup3(shi);
+
 		led10_close();
 		led11_close();
 		led12_open();
-		displaySingleDigitalGroup2(ge);
+		led13_close();
+		led14_close();
+		led15_close();
+		displaySingleDigitalGroup3(ge);
 	}
 }
 
@@ -857,3 +885,9 @@ static void led5Dispaly(int16_t value)
 }
 
 
+void led3Close()
+{
+	displaySingleDigitalGroup2(11);
+	displaySingleDigitalGroup2(11);
+	displaySingleDigitalGroup2(11);
+}
